@@ -1,25 +1,32 @@
-﻿using TF_Csharp_OO_FS_Net.Models;
+﻿using TF_Csharp_OO_FS_Net.Veterinaire;
 
-Console.WriteLine();
+Animal animal1 = new Animal("Poppy", "Levrier", "Blanc");
+Animal animal2 = new Animal("puppy", "poulet", "Noir");
+Animal animal3 = new Animal("poupy", "chat", "Tigré"); 
+Animal animal4 = new Animal("popol", "lapin", "Roux");
+Animal animal5 = new Animal("polette", "Taureau", "Brun");
+Animal animal6 = new Animal("jacky", "Baleine", "Bleu");
 
-Personne personne = new Personne();
+Cabinet cabinet = new Cabinet("Michou le Cabinet");
 
-personne.Prenom = "Dimitri";
-personne.Nom = "DelaHaute";
-personne.DateNaiss = DateTime.Now;
+cabinet.Ajouter(animal1);
 
-Courant courant = new Courant();
+cabinet.Ajouter(animal2);
 
-courant.Numero = "ABC123";
-courant.LigneDeCredit = 400;
-courant.Titulaire = personne;
+cabinet.Ajouter(animal3);
 
+cabinet.Ajouter(animal4);
 
-Console.WriteLine($"Le Proprio du compte {courant.Numero} est {courant.Titulaire.Prenom} {courant.Titulaire.Nom}");
+cabinet.Ajouter(animal5);
 
+cabinet.Ajouter(animal6);
 
-Indexeur indexeur = new Indexeur();
+cabinet.Lister();
 
-indexeur[1] = "RO34623462346";
+cabinet.Supprimer(animal4);
 
-Console.WriteLine(indexeur["fr"]);
+cabinet.Lister();
+
+cabinet.Ajouter(animal2);
+
+cabinet.Supprimer(animal4);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TF_Csharp_OO_FS_Net.Models
+namespace TF_Csharp_OO_FS_Net.Demos
 {
     internal class Indexeur
     {
@@ -29,7 +29,7 @@ namespace TF_Csharp_OO_FS_Net.Models
                 }
 
                 return "Not Found";
-                
+
             }
             set
             {
@@ -43,7 +43,7 @@ namespace TF_Csharp_OO_FS_Net.Models
             {
                 return CartesID.ElementAt(index).Value;
             }
-            set 
+            set
             {
                 CartesID[CartesID.ElementAt(index).Key] = value;
             }
