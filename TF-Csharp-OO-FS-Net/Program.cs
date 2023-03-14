@@ -1,6 +1,8 @@
-﻿using TF_Csharp_OO_FS_Net.Veterinaire;
+﻿using TF_Csharp_OO_FS_Net.Demos;
+using TF_Csharp_OO_FS_Net.ExoDD;
+//using TF_Csharp_OO_FS_Net.Veterinaire;
 
-//#region Animalerie
+#region Animalerie
 
 //Animal animal1 = new Animal("Poppy", "Levrier", "Blanc");
 //Animal animal2 = new Animal("puppy", "poulet", "Noir");
@@ -33,5 +35,111 @@
 
 //cabinet.Supprimer(animal4);
 
-//#endregion
+#endregion
 
+#region Heritage
+
+//Personne p = new Employe("Seb", "Bya", new DateTime(1991, 03, 27));
+//Console.WriteLine(p.ToString());
+//Console.WriteLine(p.Manger());
+//if (p is Employe e)
+//{
+//    Console.WriteLine(e.Manger("une pomme"));
+//    e.Salaire = 2000;
+//}
+//Console.WriteLine(p.Manger());
+
+#endregion
+
+#region Polymorphisme
+
+//List<Animal> animaux = new List<Animal>()
+//{
+//    new Animal()
+//    {
+//        Name = "Pierre"
+//    },
+//    new Chien()
+//    {
+//        Name = "Malcko"
+//    },
+//    new Oiseau()
+//    {
+//        Name = "Woody wood pecker"
+//    },
+//    new Poisson()
+//    {
+//        Name = "Maurice"
+//    }
+//};
+
+//foreach(Animal a in animaux)
+//{
+//    //if(a is Chien)
+//    //{
+//    //    Chien c = a as Chien;
+//    //    c.SeDeplacer();
+//    //}
+//    switch (a)
+//    {
+//        case Chien c:
+//            c.SeDeplacer();
+//            break;
+//        case Oiseau o:
+//            o.SeDeplacer();
+//            break;
+//        case Poisson p:
+//            p.SeDeplacer();
+//            break;
+//        default:
+//            a.SeDeplacer();
+//            break;
+//    }
+//    //a.SeDeplacer();
+//}
+
+
+#endregion
+
+#region Abstract
+
+//List<Vehicule> vehicules = new List<Vehicule>()
+//{
+//    new Voiture()
+//    {
+//        marque = "Dodge"
+//    },
+//    new Bateau()
+//    {
+//        marque = "Sloop"
+//    },
+//    new Avion()
+//    {
+//        marque = "Concorde"
+//    }
+//};
+
+//foreach(Vehicule v in vehicules)
+//{
+//    v.SeDeplacer();
+//}
+
+#endregion
+
+#region Static
+
+//FakeDb.Books.Add(new Book()
+//{
+//    Title = "Mulan",
+//    Description = "Vive Mushu",
+//    Author = "Seb"
+//});
+//foreach(Book b in FakeDb.Books)
+//{
+//    Console.WriteLine(b);
+//    Console.WriteLine("______________________________________");
+//}
+
+Console.WriteLine(Dice.Throws(DiceType.D100,10,5));
+
+#endregion
